@@ -1,0 +1,58 @@
+-rw-r--r-- 1 root root 0 Dec 16 11:01 file4
+
+
+
+-           : type of the file
+rw-r--r--   : permission part
+1           : ACL
+root        : file owner
+root        : group owner
+0           : no. of characters
+Dec 16 11:01: date and time of creation of file
+file4       : name of the file
+
+
+FILE TYPES=5
+1) - : regular file
+2) b : blocked file
+3) c : character file
+4) d : directory file
+5) l : link file
+
+
+PERMISSIONS =3 CATEGORIES
+1)r = READ;       its value is 4
+2)w = write;      its value is 2
+3)x = executable; its value is 1
+
+Permission can be given for 3 parts
+1)rw-  : user part  its value is 6
+2)r--  : group part its value is 4
+3)r--  : others     its value is 4
+
+
+chmod 761
+-rwxrw---x 
+rwx   rw-    --x 
+===========================================================
+
+OWNERS & GROUPS
+
+ROOT               : main user
+Super user         : created by root user and he can do all things
+Normal user        : access of having files
+
+
+useradd user-name  : to create user
+cat /etc/passwd    : to see user list
+getent passwd      : to see user list
+
+cat /etc/group     : to see group list
+getent group       : to see group list
+
+chown naveen file1        : to change root ownership
+chgrp naveen file1        : to change group ownership
+chown yamini:yamini file  : to change root and group ownership at a time
+chown naveen:yamini file  : to change 
+
+usermod -a  -G yamini naveen : to combaine one group to another group
